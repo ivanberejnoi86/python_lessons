@@ -19,7 +19,6 @@ print("Вы ввели {}, результат- {}.".format(get_value, new_value)
 print("Удвоеная строка.")
 get_str = input("Введите строку:")
 new_str = get_str +" "+ get_str
-
 print("Вы ввели: " + get_str + " результат " + new_str)
 
 
