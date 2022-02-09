@@ -2,8 +2,8 @@
 digit = 10203250
 my_text = str(digit)
 count_1 = 0
-for nunmer in my_text:
-    if nunmer == '0':
+for number in my_text:
+    if number == '0':
         count_1 += 1
 print(count_1)
 
