@@ -23,13 +23,15 @@ my_list_1 = [1,3,5,7,9]
 my_list_2 = [2,4,6,8,10]
 my_result = []
 for i in range(len(my_list_2)):
-    my_result.append(my_list_1[i])
-    my_result.append(my_list_2[i])
+    if i % 2 == 0:
+        my_result.append(my_list_1[i])
+    elif i % 2 != 0:
+        my_result.append(my_list_2[i])
 print(my_result)
 
 ########################################################################################
-my_list = [1, 2, 3, 4, 5]
-new_list = my_list[::-1].copy()
+my_list = [1, 2, 3, 4]
+new_list = my_list[1:] + my_list[:1]
 print(new_list)
 print(id(my_list), id(new_list))
 
@@ -51,14 +53,8 @@ print(sum)
 my_str = 'My long string'
 l_limit = 'o'
 r_limit = 'g'
-r_limit_indx = 0
-l_limit_indx = 0
-for i in  range(len(my_str)):
-    if  my_str[i] == l_limit:
-        l_limit_indx = i
-    elif my_str[-i] == r_limit:
-        if r_limit_indx == 0:
-            r_limit_indx = len(my_str) - i
+l_limit_indx = my_str.find(l_limit)
+r_limit_indx = my_str.rfind(r_limit)
 sub_str = my_str[l_limit_indx + 1:r_limit_indx]
 print(sub_str)
 
