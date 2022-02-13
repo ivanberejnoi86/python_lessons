@@ -79,7 +79,7 @@ def rand_string ():
 
 def create_email (input_name, input_domains):
     rand_name = random.choice(input_name)
-    rand_numb = random.randint(100,999)
+    rand_numb = random.randint(100, 999)
     rand_domains = random.choice(input_domains)
     new_email = f'{rand_name}.{rand_numb}@{rand_string()}.{rand_domains}'
 
