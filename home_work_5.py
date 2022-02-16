@@ -56,12 +56,18 @@ print(symbols_in(my_str1, my_str2))
 my_str1 = 'Leonid'
 my_str2 = 'Wladimir'
 
-def symbol_in (input_str1, input_str2):
-    symb_list = []
+def symbol_in (input_str1, input_str2) -> list:
+    symb_str1 = []
+    symb_str2 = []
     for symb in input_str1:
-        if symb in input_str2 and symb != ' ':
-            symb_list.append(symb)
-    return set(symb_list)
+        if input_str1.count(symb) == 1 and symb != ' ':
+            symb_str1.append(symb)
+    for symb in input_str2:
+        if input_str2.count(symb) == 1 and symb != ' ':
+            symb_str2.append(symb)
+    symb_list = list(set(symb_str1) & set(symb_str2))
+    return symb_list
+
 print(symbol_in(my_str1, my_str2))
 ################################################################################
 
